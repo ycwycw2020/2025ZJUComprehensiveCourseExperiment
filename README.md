@@ -1,4 +1,4 @@
-# 2025ZJUComprehensiveCourseExperiment
+# 2025 ZJU Comprehensive_Course_Experiment
 ### Title:
 
   Aggregate Carbon Emissions by Sector in the World’s Major Emitting Countries in Recent Years
