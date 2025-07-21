@@ -9,10 +9,10 @@ df = pd.read_csv(csv_path)
 # 2. 转换日期列
 df['Date'] = pd.to_datetime(df['Date'])
 
-# 3. 提取年月字符串（如 2019-01）
+# 3. 提取年月字符串
 df['YearMonth'] = df['Date'].dt.to_period('M').astype(str)
 
-# 4. 按 YearMonth 和 Sector 分组求和
+# 4. 按 Year-Month \ Sector 相同进行分组求和
 grouped = df.groupby(['YearMonth', 'Sector'])['CO2 (Mt)'].sum().reset_index()
 
 # 5. 使用透视表将 Sector 列转为列
