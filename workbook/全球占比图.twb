@@ -1,0 +1,854 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20252.25.0514.2217                               -->
+<workbook original-version='18.1' source-build='2025.2.0 (20252.25.0514.2217)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='carbon_data_export_Brazil_new' inline='true' name='federated.0ksul8b1145ovw1bmnuy0174nyxe' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='carbon_data_export_Brazil_new' name='textscan.1smyr2r1u2t5ua1e9u0g80pt225r'>
+            <connection class='textscan' directory='C:/Users/Omega/Documents/我的 Tableau 存储库/数据源/carbon_data_new' filename='carbon_data_export_Brazil_new.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation all='true' name='carbon_data_export_Brazil_new.csv+' type='union'>
+          <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+            <column datatype='string' name='YearMonth' />
+            <column datatype='real' name='Domestic Aviation' />
+            <column datatype='real' name='Ground Transport' />
+            <column datatype='real' name='Industry' />
+            <column datatype='real' name='International Aviation' />
+            <column datatype='real' name='Power' />
+            <column datatype='real' name='Residential' />
+            <column datatype='real' name='Total' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Brazil_new.csv' table='[carbon_data_export_Brazil_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_China_new.csv' table='[carbon_data_export_China_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_France_new.csv' table='[carbon_data_export_France_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Germany_new.csv' table='[carbon_data_export_Germany_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_India_new.csv' table='[carbon_data_export_India_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Italy_new.csv' table='[carbon_data_export_Italy_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Japan_new.csv' table='[carbon_data_export_Japan_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_ROW_new.csv' table='[carbon_data_export_ROW_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Russia_new.csv' table='[carbon_data_export_Russia_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Spain_new.csv' table='[carbon_data_export_Spain_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_United_new.csv' table='[carbon_data_export_United_new#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+              <column datatype='string' name='YearMonth' ordinal='0' />
+              <column datatype='real' name='Domestic Aviation' ordinal='1' />
+              <column datatype='real' name='Ground Transport' ordinal='2' />
+              <column datatype='real' name='Industry' ordinal='3' />
+              <column datatype='real' name='International Aviation' ordinal='4' />
+              <column datatype='real' name='Power' ordinal='5' />
+              <column datatype='real' name='Residential' ordinal='6' />
+              <column datatype='real' name='Total' ordinal='7' />
+            </columns>
+          </relation>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YearMonth</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[YearMonth]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>YearMonth</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Domestic Aviation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Domestic Aviation]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>Domestic Aviation</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Ground Transport</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Ground Transport]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>Ground Transport</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Industry</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Industry]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>Industry</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>International Aviation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[International Aviation]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>International Aviation</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Power</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Power]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>Power</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Residential</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Residential]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>Residential</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>Total</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[carbon_data_export_Brazil_new.csv+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LZH_RCN' />
+            <object-id>[_DCA00D0540AF4F5DBF7A29C9902EC52E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='表名称 - 拆分 1' datatype='string' name='[Table Name - 拆分 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[Table Name]'>
+        <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Table Name], &quot;carbon&quot;, 2 ), &quot;_&quot;, 4 ) )' />
+      </column>
+      <column caption='carbon_data_export_Brazil_new.csv+' datatype='table' name='[__tableau_internal_object_id__].[_DCA00D0540AF4F5DBF7A29C9902EC52E]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;中国&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <object-graph>
+        <objects>
+          <object caption='carbon_data_export_Brazil_new.csv+' id='_DCA00D0540AF4F5DBF7A29C9902EC52E'>
+            <properties context=''>
+              <relation all='true' name='carbon_data_export_Brazil_new.csv+' type='union'>
+                <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                  <column datatype='string' name='YearMonth' />
+                  <column datatype='real' name='Domestic Aviation' />
+                  <column datatype='real' name='Ground Transport' />
+                  <column datatype='real' name='Industry' />
+                  <column datatype='real' name='International Aviation' />
+                  <column datatype='real' name='Power' />
+                  <column datatype='real' name='Residential' />
+                  <column datatype='real' name='Total' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Brazil_new.csv' table='[carbon_data_export_Brazil_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_China_new.csv' table='[carbon_data_export_China_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_France_new.csv' table='[carbon_data_export_France_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Germany_new.csv' table='[carbon_data_export_Germany_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_India_new.csv' table='[carbon_data_export_India_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Italy_new.csv' table='[carbon_data_export_Italy_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Japan_new.csv' table='[carbon_data_export_Japan_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_ROW_new.csv' table='[carbon_data_export_ROW_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Russia_new.csv' table='[carbon_data_export_Russia_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_Spain_new.csv' table='[carbon_data_export_Spain_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+                <relation connection='textscan.1smyr2r1u2t5ua1e9u0g80pt225r' name='carbon_data_export_United_new.csv' table='[carbon_data_export_United_new#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='zh_CN' separator=','>
+                    <column datatype='string' name='YearMonth' ordinal='0' />
+                    <column datatype='real' name='Domestic Aviation' ordinal='1' />
+                    <column datatype='real' name='Ground Transport' ordinal='2' />
+                    <column datatype='real' name='Industry' ordinal='3' />
+                    <column datatype='real' name='International Aviation' ordinal='4' />
+                    <column datatype='real' name='Power' ordinal='5' />
+                    <column datatype='real' name='Residential' ordinal='6' />
+                    <column datatype='real' name='Total' ordinal='7' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='工作表 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Countries-data Pie</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='carbon_data_export_Brazil_new' name='federated.0ksul8b1145ovw1bmnuy0174nyxe' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0ksul8b1145ovw1bmnuy0174nyxe'>
+            <column caption='表名称 - 拆分 1' datatype='string' name='[Table Name - 拆分 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[Table Name]'>
+              <calculation class='tableau' formula='TRIM( SPLIT( SPLIT( [Table Name], &quot;carbon&quot;, 2 ), &quot;_&quot;, 4 ) )' />
+            </column>
+            <column datatype='string' name='[Table Name]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Total]' role='measure' type='quantitative' />
+            <column-instance column='[Table Name - 拆分 1]' derivation='None' name='[none:Table Name - 拆分 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total]' derivation='Sum' name='[pcto:sum:Total:qk]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[Total]' derivation='Sum' name='[sum:Total:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]' />
+              <wedge-size column='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]' />
+              <size column='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]' />
+              <text column='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]' />
+              <text column='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Brazil&quot;</value>
+                <value>2615.0597490000005</value>
+                <value>0.012613246722034158</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;China&quot;</value>
+                <value>69826.912712999983</value>
+                <value>0.33679692336812156</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;France&quot;</value>
+                <value>1787.6177409999996</value>
+                <value>0.0086222364978622706</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Germany&quot;</value>
+                <value>3978.927439</value>
+                <value>0.019191604894064129</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;India&quot;</value>
+                <value>16826.050428999995</value>
+                <value>0.081157275851736418</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Italy&quot;</value>
+                <value>1926.4082550000003</value>
+                <value>0.009291666325012252</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Japan&quot;</value>
+                <value>6620.2356980000022</value>
+                <value>0.031931456345815228</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;ROW&quot;</value>
+                <value>61359.941671999994</value>
+                <value>0.29595808793834216</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Russia&quot;</value>
+                <value>10021.541583000004</value>
+                <value>0.048337012785211041</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Spain&quot;</value>
+                <value>1463.7868329999997</value>
+                <value>0.0070602992838516608</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]</field>
+                  <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[pcto:sum:Total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;United&quot;</value>
+                <value>30899.974479999993</value>
+                <value>0.1490401899879493</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+      <simple-id uuid='{FEB63A75-6363-4C2B-A7A3-4682BE4066F1}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='工作表 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0ksul8b1145ovw1bmnuy0174nyxe].[sum:Total:qk]' type='size' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='98'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0ksul8b1145ovw1bmnuy0174nyxe].[none:Table Name - 拆分 1:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8C62EBF9-B7E0-4859-8F11-765964AA2DCC}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='工作表 1' width='192'>
+      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
+      AElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
