@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/jquery.fullPage.js"></script>
+  <!-- 引入 vintage 主题 -->
+  <script src="js/essos.js"></script>
+  <title>When we talk about carbon emissions, what are we talking about?</title>
+
+  <!-- Load Google Font -->
+  <!--<link href='https://fonts.googleapis.com/css?family=Roboto:100,400,300,400italic,700' rel='stylesheet' type='text/css'>-->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/leaflet.css">
+  <link rel="stylesheet" type="text/css" href="css/sequences.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+  <script>
+      $(function () {
+          $('#fullpage').fullpage({
+              anchors: ["cover","firstPage", 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'lastPage'],
+          });
+      });
+  </script>
+</head>
+
+<body style="width: 100%;background: #f4f1e6">
+
+<div class="main-container">
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+      <a href="#cover" class="w3-bar-item w3-button"><b>Carbon Emissions</b></a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="#firstPage" class="w3-bar-item w3-button">Energy</a>
+        <a href="#secondPage" class="w3-bar-item w3-button">Global</a>
+        <a href="#thirdPage" class="w3-bar-item w3-button">Trend</a>
+        <a href="#fourthPage" class="w3-bar-item w3-button">Economic</a>
+        <a href="#fifthPage" class="w3-bar-item w3-button">China</a>
+        <a href="#sixthPage" class="w3-bar-item w3-button">Action</a>
+        <a href="#seventhPage" class="w3-bar-item w3-button">Hope</a>
+        <a href="#lastPage" class="w3-bar-item w3-button">About</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="fullpage">
+
+    <div class="section" id="cover_photo">
+      <div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div id="cover-text">
+          <h1><b> Global Energy and Carbon Emissions</b></h1>
+          <h2 id="subtitle"><b><i>
+            <br>
+            Sustainable development is a common global goal.<br><br>
+            Fossil fuel dependence threatens its realization.<br><br>
+            Energy issues are a long-term strategic priority.<br><br>
+          </i></b></h2>
+          <br><br><br><br><br><br><br><br>
+          <div style="text-align: center">
+            <p><i>Scroll to continue</i></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--Energy-->
+    <div class="section">
+      <div class="w3-container w3-padding-32" id="other_schools">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">Before we begin, let's take a look at the global energy usage structure.</h3>
+      </div>
+
+      <div class="w3-row-padding row">
+        <div class="row">
+          <div class="col-md-6">
+            <h3>   Processes that produce carbon dioxide</h3>
+            <img src="img/Scope+1+2+3+emissions.gif" style="position:absolute;left:-50px;top:100px;width:700px;height:400px;">
+          </div>
+          <div id="Energy" style="position:relative;left:700px;top:30px;width:750px;height:500px;"></div>
+          <script src="js/Energy.js"></script>  
+        </div>
+      </div>
+
+    </div>
+
+    <!--Global-->
+    <div class="section w3-container w3-padding-32">
+      <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">Going a step further, let's look at the use of fossil energy.</h3> 
+      <img src="img/Global.webp" style="position:absolute;left:935px;top:200px;width:550px;height:550px;">
+      <div id="Global" style="position:relative;left:-20px;top:0px;width:900px;height:600px;"></div>
+      <script src="js/Global.js"></script> 
+    </div>
+
+    <!--Trend-->
+    <div class="section">
+      <div class="w3-container w3-padding-32">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">Now that we understand the current situation, let's take a look at the history of carbon emissions.</h3>
+      </div>
+      <div class="w3-row-padding row">
+
+      </div>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="w3-row-padding row">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="img/area.png" style="position:absolute;left:50px;top:210px;width:500px;height:625px;">
+        <div id="Trend" style="position:absolute;right:25px;top:220px;width: 930px;height: 600px;"></div>
+        <script src="js/Trend.js"></script>
+      </div>
+    </div>
+
+    <!--Economic-->
+    
+    <div class="section">
+      <div class="w3-container w3-padding-32" id="nationwide">
+        <h3 class="section-title 3-border-bottom w3-border-light-grey w3-padding-16">China's Carbon Emissions and Economic Development</h3>
+      </div>
+      <img src="img/Economic2.png" style="position:absolute;left:900px;top:100px;width:600px;height:700px;">
+      <div class="w3-row-padding row">
+      <h3>Explore the relationship between the GDP and <br> <br>Carbon Emission in different countries</h3> 
+      </div>
+      <img src="img/Economic1.png" style="position:relative;left:120px;top:35px;width:600px;height:400px;">
+    </div>
+  
+
+    <!--China-->
+    <div class="section">
+      <div class="w3-container w3-padding-32" id="other_schools">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">China's Carbon Emissions and Economic Development</h3>
+      </div>
+
+      <div class="w3-row-padding row">
+        <h2></h2> What's the relationship between economic and Carbon emissions in China? 
+        <h3 class="instruction">Click on the table to see the development between 1990-2018.</h3>
+        <div class="row">
+          
+          <div class="col-md-6">
+          </div>
+          <div id="China" style="position:relative;left:20px;top:0px;width: 1300px;height: 500px;"></div>
+          <script src="js/China.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <!--Action-->
+    <!-- <div class="section w3-container w3-padding-32">
+      <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">Going a step further, let's look at the use of fossil energy.</h3> 
+      <img src="img/Action_china.png" style="position:absolute;left:935px;top:200px;width:550px;height:550px;">
+      <img src="img/Action_usa.png" style="position:relative;left:-20px;top:0px;width:900px;height:600px;">
+    </div> -->
+    <div class="section w3-container w3-padding-32">
+      <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">Going a step further, let's look at the use of fossil energy.</h3> 
+      <br><br>
+      <div class="w3-row">
+        <!-- Left Image (USA) -->
+        <div class="w3-col m6 w3-padding">
+          <div class="w3-card w3-padding" style="text-align: center">
+            <img src="img/Action_usa.png" alt="USA Fossil Energy Use" style="width: 100%; max-height: 530px; object-fit: contain">
+            <div class="w3-padding-small"><br>United States</div>
+          </div>
+        </div>
+        
+        <!-- Right Image (China) -->
+        <div class="w3-col m6 w3-padding">
+          <div class="w3-card w3-padding" style="text-align: center">
+            <img src="img/Action_china.png" alt="China Fossil Energy Use" style="width: 100%; max-height: 480px; object-fit: contain">
+            <div class="w3-padding-small"><br>China</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Hope-->
+    <div class="section">
+      <div class="w3-container w3-padding-32" id="responses">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">Nuclear energy is the ultimate solution
+        </h3>
+      </div>
+
+      <div class="w3-row-padding w3-container">
+        <h3 class="w3-center">The Development of Nuclear Energy Over the World</h3>
+        
+        <div class="w3-container" style="display: flex; justify-content: center; margin: 20px 0">
+          <div style="max-width: 1200px; width: 100%">
+            <video 
+              controls 
+              style="width: 100%; height: auto; max-height: 720px; display: block; margin: 0 auto"> <!-- 可选的预览图 -->
+              <source src="img/hope.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+    <!--About-->
+    <div class="section w3-container w3-padding-32 last-section">
+      <!--about-->
+      <div class="w3-container" id="about">
+        <h3 class="section-title w3-border-bottom w3-border-light-grey w3-padding-16">About this Project</h3>
+      </div>
+      <div class="w3-row w3-padding-32" style="font-size: 20px;">
+        <div class="col-md-6">
+          <div class="w3-row">
+            <h3>Our Team</h3>
+            <div style="width: 80%; margin-left: 11%">
+              <div class="w3-third" style="text-align: center">
+                <h4>Li Yi</h4>
+              </div>
+              <div class="w3-third" style="text-align: center">
+                <h4>Yang ChengWei</h4>
+              </div>
+              <div class="w3-third" style="text-align: center">
+                <h4>Wen BoTao</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="w3-row">
+            <h3>Notes</h3>
+            <h4>Our visualizations are based on publicly available data and information. If there are any issues please contact us. </h4>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="w3-row">
+            <h3>References</h3>
+            <ol id="reference_list" style="font-size: 20px;">
+              <li>Carbon Monitor  <a href="https://www.carbonmonitor.org.cn/">https://www.carbonmonitor.org.cn/</a></li>
+              <li>International Energy Agency (IEA) <a href="https://www.iea.org">https://www.iea.org</a></li>
+              <li>United Nations Environment Programme (UNEP)  <a href="https://www.unep.org/interactives/emissions-gap-report/2023/">https://www.unep.org/interactives/emissions-gap-report/2023/</a></li>
+              <li>Our World in Data  <a href="https://ourworldindata.org/co2-emissions">https://ourworldindata.org/co2-emissions</a></li>
+              <li>EDGAR (Emission Database for Global Atmospheric Research)  <a href="https://edgar.jrc.ec.europa.eu/">https://edgar.jrc.ec.europa.eu/</a></li>
+              <li>World Bank  <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.CD">https://data.worldbank.org/indicator/NY.GDP.PCAP.CD</a></li>
+              <li>National Bureau of Statistics of China  <a href="http://www.stats.gov.cn/">http://www.stats.gov.cn/</a></li>
+              <li>Brookings Institution  <a href="https://www.brookings.edu/">https://www.brookings.edu/</a></li>
+              <li>Global Energy Monitor  <a href="https://globalenergymonitor.org/">https://globalenergymonitor.org/</a></li>
+              <li>National Energy Administration of China   <a href="http://www.nea.gov.cn/">http://www.nea.gov.cn/</a></li>
+            </ol>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Development -->
+<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+<!-- Production -->
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="https://unpkg.com/tippy.js@6"></script>
+<!-- Load JS libraries -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/leaflet.js"></script>
+<script src="js/d3.js"></script>
+<script src="js/d3-tip.js"></script>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript">
+    // Hack to make this example display correctly in an iframe on bl.ocks.org
+    d3.select(self.frameElement).style("height", "700px");
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.0/d3-legend.js"></script>
+
+<!-- Visualization objects -->
+<script src="js/barChart.js"></script>
+<script type="text/javascript" src="js/sequences.js"></script>
+
+<!-- Load data, create visualizations -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
