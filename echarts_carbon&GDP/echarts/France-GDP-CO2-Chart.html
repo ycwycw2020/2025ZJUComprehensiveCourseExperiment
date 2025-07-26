@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>France Economic Indicators</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        #chart-container {
+            width: 900px;
+            height: 600px;
+            margin: 30px auto;
+        }
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #5470C6;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+        .download-btn:hover {
+            background-color: #3a56b4;
+        }
+    </style>
+</head>
+<body>
+    <h1>France Economic and Environmental Indicators</h1>
+    <div id="chart-container"></div>
+    <div id="download" class="download-btn">Download Chart as Image</div>
+
+    <script>
+        // France data in CSV format (embedded in the HTML)
+        const franceCSV = `Year,GDP (10B),Mt CO2
+2024,316,395
+2023,305,403
+2022,280,315
+2021,297,325
+2020,265,286
+2019,272,332
+2018,278,328
+2017,259,339
+2016,247,355
+2015,244,360
+2010,265,385
+2005,219,410
+2000,136,415
+1995,160,420
+1990,126,405
+1985,55,380
+1980,69,440
+1975,36,460
+1970,15,450
+1965,10,350
+1960,6,270`;
+
+        // Parse CSV data into the required format
+        function parseCSV(csv) {
+            const lines = csv.split('\n');
+            const result = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i] || lines[i].trim() === '') continue;
+                
+                const [Year, GDP, CO2] = lines[i].split(',');
+                result.push({
+                    Year: Year.trim(),
+                    'GDP (10B)': parseFloat(GDP),
+                    'Mt CO2': parseInt(CO2)
+                });
+            }
+            
+            return result;
+        }
+
+        function initChart() {
+            const chartDom = document.getElementById('chart-container');
+            const myChart = echarts.init(chartDom);
+            
+            const franceData = parseCSV(franceCSV);
+            
+            option = {
+                dataset: [
+                    {
+                        id: 'dataset_raw',
+                        source: franceData
+                    },
+                    {
+                        id: 'dataset_gdp',
+                        fromDatasetId: 'dataset_raw',
+                        transform: {
+                            type: 'filter',
+                            config: {
+                                dimension: 'GDP (10B)',
+                                '!=': 'null'
+                            }
+                        }
+                    },
+                    {
+                        id: 'dataset_co2',
+                        fromDatasetId: 'dataset_raw',
+                        transform: {
+                            type: 'filter',
+                            config: {
+                                dimension: 'Mt CO2',
+                                '!=': 'null'
+                            }
+                        }
+                    }
+                ],
+                title: {
+                    text: 'France GDP and CO2 Emissions (1960-2024)',
+                    },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross'
+                    }
+                },
+                legend: {
+                    data: ['GDP (10B)', 'CO2 Emissions (Mt)']
+                },
+                xAxis: {
+                    type: 'category',
+                    name: 'Year',
+                    nameLocation: 'middle'
+                },
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: 'GDP (10B USD)',
+                        position: 'left'
+                    },
+                    {
+                        type: 'value',
+                        name: 'CO2 Emissions (Mt)',
+                        position: 'right'
+                    }
+                ],
+                series: [
+                    {
+                        name: 'GDP (10B)',
+                        type: 'line',
+                        datasetId: 'dataset_gdp',
+                        showSymbol: true,
+                        encode: {
+                            x: 'Year',
+                            y: 'GDP (10B)',
+                            itemName: 'Year',
+                            tooltip: ['GDP (10B)']
+                        },
+                        yAxisIndex: 0,
+                        itemStyle: {
+                            color: '#5470C6'
+                        }
+                    },
+                    {
+                        name: 'CO2 Emissions (Mt)',
+                        type: 'line',
+                        datasetId: 'dataset_co2',
+                        showSymbol: true,
+                        encode: {
+                            x: 'Year',
+                            y: 'Mt CO2',
+                            itemName: 'Year',
+                            tooltip: ['Mt CO2']
+                        },
+                        yAxisIndex: 1,
+                        itemStyle: {
+                            color: '#EE6666'
+                        }
+                    }
+                ]
+            };
+            
+            myChart.setOption(option);
+            
+            // Add download functionality
+            document.getElementById('download').addEventListener('click', function() {
+                const url = myChart.getDataURL({
+                    type: 'png',
+                    pixelRatio: 2,
+                    backgroundColor: '#fff'
+                });
+                
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'France-GDP-CO2-Chart.png';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+            
+            // Responsive resize
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        }
+        
+        // Initialize the chart when the page loads
+        document.addEventListener('DOMContentLoaded', initChart);
+    </script>
+</body>
+</html>

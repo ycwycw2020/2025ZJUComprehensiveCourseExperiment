@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brazil Economic and Environmental Indicators</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        #chart-container {
+            width: 900px;
+            height: 600px;
+            margin: 30px auto;
+        }
+        h1 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #5470C6;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+        .download-btn:hover {
+            background-color: #3a56b4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Brazil Economic and Environmental Indicators</h1>
+    <div id="chart-container"></div>
+    <div id="download" class="download-btn">Download Chart as Image</div>
+
+    <script>
+        // Brazil data in CSV format (embedded in the HTML)
+        const brazilCSV = `Year,GDP (10B),Mt co2
+2024,218,485
+2023,219,479
+2022,195,455
+2021,167,455
+2020,148,520
+2015,180,546
+2010,221,480
+2005,89.2,395
+2000,65.5,360
+1995,76.9,330
+1990,38.5,295
+1985,21.1,260
+1980,23.7,320
+1970,4.2,140
+1960,1.7,95`;
+
+        // Parse CSV data
+        function parseCSV(csv) {
+            const lines = csv.split('\n');
+            const headers = lines[0].split(',');
+            const result = [];
+            
+            for (let i = 1; i < lines.length; i++) {
+                if (!lines[i] || lines[i].trim() === '') continue;
+                
+                const obj = {};
+                const currentline = lines[i].split(',');
+                
+                for (let j = 0; j < headers.length; j++) {
+                    let value = currentline[j].trim();
+                    
+                    if (headers[j] === 'Year') {
+                        obj[headers[j]] = parseInt(value);
+                    } 
+                    else if (headers[j] === 'GDP (10B)') {
+                        obj['GDP'] = parseFloat(value);
+                    } 
+                    else if (headers[j] === 'Mt co2') {
+                        obj['CO2'] = parseInt(value);
+                    }
+                }
+                
+                if (obj.Year && (obj.GDP || obj.CO2)) {
+                    result.push(obj);
+                }
+            }
+            
+            return result.sort((a, b) => a.Year - b.Year);
+        }
+
+        // Initialize chart
+        function initChart() {
+            const chartDom = document.getElementById('chart-container');
+            const myChart = echarts.init(chartDom);
+            
+            const brazilData = parseCSV(brazilCSV);
+            
+            const option = {
+                title: {
+                    text: 'Brazil GDP and CO2 Emissions (1960-2024)',
+                    subtext: 'GDP in 10 Billions (10B) | Data Source: Provided CSV',
+                    left: 'center'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'cross',
+                        crossStyle: {
+                            color: '#999'
+                        }
+                    },
+                    formatter: function(params) {
+                        let result = params[0].name + '<br/>';
+                        params.forEach(param => {
+                            if (param.seriesName === 'GDP (10B)') {
+                                result += `${param.seriesName}: ${param.value} ($${(param.value * 10).toLocaleString()}B)<br/>`;
+                            } else {
+                                result += `${param.seriesName}: ${param.value} Mt<br/>`;
+                            }
+                        });
+                        return result;
+                    }
+                },
+                legend: {
+                    data: ['GDP (10B)', 'CO2 Emissions (Mt)'],
+                    top: 30
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'category',
+                    data: brazilData.map(item => item.Year),
+                    axisPointer: {
+                        type: 'shadow'
+                    },
+                    name: 'Year',
+                    nameLocation: 'middle',
+                    nameGap: 30
+                },
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: 'GDP (10B USD)',
+                        position: 'left',
+                        axisLabel: {
+                            formatter: '{value}'
+                        }
+                    },
+                    {
+                        type: 'value',
+                        name: 'CO2 Emissions (Mt)',
+                        position: 'right',
+                        axisLabel: {
+                            formatter: '{value}'
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: 'GDP (10B)',
+                        type: 'line',
+                        smooth: true,
+                        data: brazilData.map(item => item.GDP),
+                        yAxisIndex: 0,
+                        itemStyle: {
+                            color: '#5470C6'
+                        },
+                        lineStyle: {
+                            width: 3
+                        },
+                        markPoint: {
+                            data: [
+                                { type: 'max', name: 'Max' },
+                                { type: 'min', name: 'Min' }
+                            ]
+                        }
+                    },
+                    {
+                        name: 'CO2 Emissions (Mt)',
+                        type: 'line',
+                        smooth: true,
+                        data: brazilData.map(item => item.CO2),
+                        yAxisIndex: 1,
+                        itemStyle: {
+                            color: '#EE6666'
+                        },
+                        lineStyle: {
+                            width: 3
+                        },
+                        markPoint: {
+                            data: [
+                                { type: 'max', name: 'Max' },
+                                { type: 'min', name: 'Min' }
+                            ]
+                        }
+                    }
+                ]
+            };
+            
+            myChart.setOption(option);
+            
+            // Add download functionality
+            document.getElementById('download').addEventListener('click', function() {
+                const url = myChart.getDataURL({
+                    type: 'png',
+                    pixelRatio: 2,
+                    backgroundColor: '#fff'
+                });
+                
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = 'Brazil-GDP-CO2-Chart.png';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+            
+            // Responsive resize
+            window.addEventListener('resize', function() {
+                myChart.resize();
+            });
+        }
+        
+        // Initialize the chart when the page loads
+        document.addEventListener('DOMContentLoaded', initChart);
+    </script>
+</body>
+</html>
